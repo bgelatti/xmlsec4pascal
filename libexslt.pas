@@ -115,7 +115,7 @@ initialization
   // but here we need to obtain the addresses of POINTERS to functions. We can
   // get to these addresses (and also those of other data values exported from
   // the DLL) by using GetProcAddress.
-  libHandle := LoadLibrary(LIBEXSLT_SO);
+  libHandle := DynLibs.LoadLibrary(LIBEXSLT_SO);
   if libHandle <> 0 then
   begin
     pexsltLibexsltVersion := PInteger(GetProcAddress(libHandle, 'exsltLibexsltVersion'));

@@ -1736,7 +1736,7 @@ var
   DoGetxmlSecInit: PxmlSecInit;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1754,7 +1754,7 @@ var
   DoGetxmlSecCheckVersionExt: PxmlSecCheckVersionExt;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1772,7 +1772,7 @@ var
   DoGetxmlSecCryptoDLLoadLibrary: PxmlSecCryptoDLLoadLibrary;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1790,7 +1790,7 @@ var
   DoGetxmlSecCryptoAppInit: PxmlSecCryptoAppInit;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1808,7 +1808,7 @@ var
   DoGetxmlSecCryptoInit: PxmlSecCryptoInit;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1826,7 +1826,7 @@ var
   DoGetxmlSecCryptoShutdown: PxmlSecCryptoShutdown;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1844,7 +1844,7 @@ var
   DoGetxmlSecCryptoAppShutdown: PxmlSecCryptoAppShutdown;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1862,7 +1862,7 @@ var
   DoGetxmlSecShutdown: PxmlSecShutdown;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1880,7 +1880,7 @@ var
   DoGetxmlSecFindNode: PxmlSecFindNode;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1898,7 +1898,7 @@ var
   DoGetxmlSecDSigCtxCreate: PxmlSecDSigCtxCreate;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1916,7 +1916,7 @@ var
   DoGetxmlSecCryptoAppKeyLoadMemory: PxmlSecCryptoAppKeyLoadMemory;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1934,7 +1934,7 @@ var
   DoGetxmlSecDSigCtxVerify: PxmlSecDSigCtxVerify;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1951,7 +1951,7 @@ var
   lHandle: TlibHandle;
   DoGetxmlSecDSigCtxDestroy: PxmlSecDSigCtxDestroy;
 begin
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -1969,7 +1969,7 @@ var
   DoGetxmlSecDSigCtxSign: PxmlSecDSigCtxSign;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXMLSEC_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXMLSEC_SO);
   if lHandle = NilHandle then
     Exit;
   try

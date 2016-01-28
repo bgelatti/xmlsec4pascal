@@ -1130,7 +1130,7 @@ var
   lHandle: System.HMODULE;
   DoGetxsltCleanupGlobals: PxsltCleanupGlobals;
 begin
-  lHandle := SafeLoadLibrary(LIBXSLT_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXSLT_SO);
   if lHandle = NilHandle then
     Exit;
   DoGetxsltCleanupGlobals := PxsltCleanupGlobals(GetProcAddress(lHandle, 'xsltCleanupGlobals'));
@@ -1186,7 +1186,7 @@ initialization
   // but here we need to obtain the addresses of POINTERS to functions. We can
   // get to these addresses (and also those of other data values exported from
   // the DLL) by using GetProcAddress.
-  libHandle := LoadLibrary(LIBXSLT_SO);
+  libHandle := DynLibs.LoadLibrary(LIBXSLT_SO);
   if libHandle <> 0 then
   begin
     __xslDebugStatus := PInteger(GetProcAddress(libHandle, 'xslDebugStatus'));

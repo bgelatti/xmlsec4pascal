@@ -4477,11 +4477,11 @@ var
   lHandle: TlibHandle;
   DoGetxmlInitThreads : PxmlInitThreads ;
 begin
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlInitThreads  := PxmlInitThreads (GetProcAddress(lHandle, 'xmlInitThreads '));
+    DoGetxmlInitThreads  := PxmlInitThreads (GetProcAddress(lHandle, 'xmlInitThreads'));
     if @DoGetxmlInitThreads  <> Nil then
       DoGetxmlInitThreads ();
   finally
@@ -4494,11 +4494,11 @@ var
   lHandle: TlibHandle;
   DoGetxmlInitParser : PxmlInitParser ;
 begin
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlInitParser  := PxmlInitParser (GetProcAddress(lHandle, 'xmlInitParser '));
+    DoGetxmlInitParser  := PxmlInitParser (GetProcAddress(lHandle, 'xmlInitParser'));
     if @DoGetxmlInitParser  <> Nil then
       DoGetxmlInitParser ();
   finally
@@ -4512,7 +4512,7 @@ var
   DoGet__xmlLoadExtDtdDefaultValue: P__xmlLoadExtDtdDefaultValue;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -4530,11 +4530,11 @@ var
   DoGetxmlSubstituteEntitiesDefault : PxmlSubstituteEntitiesDefault ;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlSubstituteEntitiesDefault  := PxmlSubstituteEntitiesDefault (GetProcAddress(lHandle, 'xmlSubstituteEntitiesDefault '));
+    DoGetxmlSubstituteEntitiesDefault  := PxmlSubstituteEntitiesDefault (GetProcAddress(lHandle, 'xmlSubstituteEntitiesDefault'));
     if @DoGetxmlSubstituteEntitiesDefault  <> Nil then
       Result := DoGetxmlSubstituteEntitiesDefault (val);
   finally
@@ -4548,7 +4548,7 @@ var
   DoGet__xmlIndentTreeOutput: P__xmlIndentTreeOutput;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
@@ -4565,11 +4565,11 @@ var
   lHandle: TlibHandle;
   DoGetxmlCleanupParser : PxmlCleanupParser ;
 begin
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle := DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlCleanupParser  := PxmlCleanupParser (GetProcAddress(lHandle, 'xmlCleanupParser '));
+    DoGetxmlCleanupParser  := PxmlCleanupParser (GetProcAddress(lHandle, 'xmlCleanupParser'));
     if @DoGetxmlCleanupParser  <> Nil then
       DoGetxmlCleanupParser ();
   finally
@@ -4583,11 +4583,11 @@ var
   DoGetxmlParseDoc : PxmlParseDoc ;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlParseDoc  := PxmlParseDoc (GetProcAddress(lHandle, 'xmlParseDoc '));
+    DoGetxmlParseDoc  := PxmlParseDoc (GetProcAddress(lHandle, 'xmlParseDoc'));
     if @DoGetxmlParseDoc  <> Nil then
       Result := DoGetxmlParseDoc (cur);
   finally
@@ -4601,11 +4601,11 @@ var
   DoGetxmlDocGetRootElement : PxmlDocGetRootElement ;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlDocGetRootElement  := PxmlDocGetRootElement (GetProcAddress(lHandle, 'xmlDocGetRootElement '));
+    DoGetxmlDocGetRootElement  := PxmlDocGetRootElement (GetProcAddress(lHandle, 'xmlDocGetRootElement'));
     if @DoGetxmlDocGetRootElement  <> Nil then
       Result := DoGetxmlDocGetRootElement (doc);
   finally
@@ -4619,11 +4619,11 @@ var
   DoGetxmlReadFile : PxmlReadFile ;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlReadFile  := PxmlReadFile (GetProcAddress(lHandle, 'xmlReadFile '));
+    DoGetxmlReadFile  := PxmlReadFile (GetProcAddress(lHandle, 'xmlReadFile'));
     if @DoGetxmlReadFile  <> Nil then
       Result := DoGetxmlReadFile (filename, encoding, options);
   finally
@@ -4637,11 +4637,11 @@ var
   DoGetxmlSchemaNewDocParserCtxt : PxmlSchemaNewDocParserCtxt ;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlSchemaNewDocParserCtxt  := PxmlSchemaNewDocParserCtxt (GetProcAddress(lHandle, 'xmlSchemaNewDocParserCtxt '));
+    DoGetxmlSchemaNewDocParserCtxt  := PxmlSchemaNewDocParserCtxt (GetProcAddress(lHandle, 'xmlSchemaNewDocParserCtxt'));
     if @DoGetxmlSchemaNewDocParserCtxt  <> Nil then
       Result := DoGetxmlSchemaNewDocParserCtxt (doc);
   finally
@@ -4655,11 +4655,11 @@ var
   DoGetxmlSchemaParse : PxmlSchemaParse ;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlSchemaParse  := PxmlSchemaParse (GetProcAddress(lHandle, 'xmlSchemaParse '));
+    DoGetxmlSchemaParse  := PxmlSchemaParse (GetProcAddress(lHandle, 'xmlSchemaParse'));
     if @DoGetxmlSchemaParse  <> Nil then
       Result := DoGetxmlSchemaParse (ctxt);
   finally
@@ -4673,11 +4673,11 @@ var
   DoGetxmlSchemaNewValidCtxt : PxmlSchemaNewValidCtxt ;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlSchemaNewValidCtxt  := PxmlSchemaNewValidCtxt (GetProcAddress(lHandle, 'xmlSchemaNewValidCtxt '));
+    DoGetxmlSchemaNewValidCtxt  := PxmlSchemaNewValidCtxt (GetProcAddress(lHandle, 'xmlSchemaNewValidCtxt'));
     if @DoGetxmlSchemaNewValidCtxt  <> Nil then
       Result := DoGetxmlSchemaNewValidCtxt (schema);
   finally
@@ -4691,11 +4691,11 @@ var
   DoGetxmlSchemaValidateDoc : PxmlSchemaValidateDoc ;
 begin
   Result := -1;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlSchemaValidateDoc  := PxmlSchemaValidateDoc (GetProcAddress(lHandle, 'xmlSchemaValidateDoc '));
+    DoGetxmlSchemaValidateDoc  := PxmlSchemaValidateDoc (GetProcAddress(lHandle, 'xmlSchemaValidateDoc'));
     if @DoGetxmlSchemaValidateDoc  <> Nil then
       Result := DoGetxmlSchemaValidateDoc (ctxt, doc);
   finally
@@ -4709,11 +4709,11 @@ var
   DoGetxmlGetLastError : PxmlGetLastError ;
 begin
   Result := nil;
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlGetLastError  := PxmlGetLastError (GetProcAddress(lHandle, 'xmlGetLastError '));
+    DoGetxmlGetLastError  := PxmlGetLastError (GetProcAddress(lHandle, 'xmlGetLastError'));
     if @DoGetxmlGetLastError  <> Nil then
       Result := DoGetxmlGetLastError ();
   finally
@@ -4726,11 +4726,11 @@ var
   lHandle: TlibHandle;
   DoGetxmlFreeDoc : PxmlFreeDoc ;
 begin
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlFreeDoc  := PxmlFreeDoc (GetProcAddress(lHandle, 'xmlFreeDoc '));
+    DoGetxmlFreeDoc  := PxmlFreeDoc (GetProcAddress(lHandle, 'xmlFreeDoc'));
     if @DoGetxmlFreeDoc  <> Nil then
       DoGetxmlFreeDoc (cur);
   finally
@@ -4743,11 +4743,11 @@ var
   lHandle: TlibHandle;
   DoGetxmlSchemaFreeParserCtxt : PxmlSchemaFreeParserCtxt ;
 begin
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlSchemaFreeParserCtxt  := PxmlSchemaFreeParserCtxt (GetProcAddress(lHandle, 'xmlSchemaFreeParserCtxt '));
+    DoGetxmlSchemaFreeParserCtxt  := PxmlSchemaFreeParserCtxt (GetProcAddress(lHandle, 'xmlSchemaFreeParserCtxt'));
     if @DoGetxmlSchemaFreeParserCtxt  <> Nil then
       DoGetxmlSchemaFreeParserCtxt (ctxt);
   finally
@@ -4760,11 +4760,11 @@ var
   lHandle: TlibHandle;
   DoGetxmlSchemaFreeValidCtxt : PxmlSchemaFreeValidCtxt ;
 begin
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlSchemaFreeValidCtxt  := PxmlSchemaFreeValidCtxt (GetProcAddress(lHandle, 'xmlSchemaFreeValidCtxt '));
+    DoGetxmlSchemaFreeValidCtxt  := PxmlSchemaFreeValidCtxt (GetProcAddress(lHandle, 'xmlSchemaFreeValidCtxt'));
     if @DoGetxmlSchemaFreeValidCtxt  <> Nil then
       DoGetxmlSchemaFreeValidCtxt (ctxt);
   finally
@@ -4777,11 +4777,11 @@ var
   lHandle: TlibHandle;
   DoGetxmlSchemaFree : PxmlSchemaFree ;
 begin
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlSchemaFree  := PxmlSchemaFree (GetProcAddress(lHandle, 'xmlSchemaFree '));
+    DoGetxmlSchemaFree  := PxmlSchemaFree (GetProcAddress(lHandle, 'xmlSchemaFree'));
     if @DoGetxmlSchemaFree  <> Nil then
       DoGetxmlSchemaFree (schema);
   finally
@@ -4794,11 +4794,11 @@ var
   lHandle: TlibHandle;
   DoGetxmlDocDumpMemory : PxmlDocDumpMemory ;
 begin
-  lHandle := SafeLoadLibrary(LIBXML2_SO);
+  lHandle :=DynLibs.SafeLoadLibrary(LIBXML2_SO);
   if lHandle = NilHandle then
     Exit;
   try
-    DoGetxmlDocDumpMemory  := PxmlDocDumpMemory (GetProcAddress(lHandle, 'xmlDocDumpMemory '));
+    DoGetxmlDocDumpMemory  := PxmlDocDumpMemory (GetProcAddress(lHandle, 'xmlDocDumpMemory'));
     if @DoGetxmlDocDumpMemory  <> Nil then
       DoGetxmlDocDumpMemory (cur, mem, size);
   finally
@@ -4902,7 +4902,7 @@ initialization
   // but here we need to obtain the addresses of POINTERS to functions. We can
   // get to these addresses (and also those of other data values exported from
   // the DLL) by using GetProcAddress.
-  libHandle := LoadLibrary(LIBXML2_SO);
+  libHandle := DynLibs.LoadLibrary(LIBXML2_SO);
   if libHandle <> 0 then
   begin
     __emptyExp := xmlExpNodePtrPtr(GetProcAddress(libHandle, 'emptyExp'));
